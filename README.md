@@ -15,6 +15,7 @@ Step 2. Add the dependency
 
 
 调用方法：
+
 	val tool = DeepSeekTool()
  
 	tool.setModel("deepseek-chat")
