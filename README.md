@@ -16,6 +16,9 @@ Step 2. Add the dependency
 
 调用方法：
 	val tool = DeepSeekTool()
+ 
 	tool.setModel("deepseek-chat")
+ 
 	tool.setKey("sk-a29f4cffdb59466e8636ccde9c8f9be9")
+ 
 	val sds = tool.getAIResponse("你好")
