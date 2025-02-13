@@ -25,4 +25,5 @@ Step 2. Add the dependency
 	val sds = tool.getAIResponse("你好")
 
  2025.02.13:v1.0.3-支持多轮对话功能
+ 
  tool.setMultiRound(true)
