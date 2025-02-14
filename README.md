@@ -27,3 +27,9 @@ Step 2. Add the dependency
  2025.02.13:v1.0.3-支持多轮对话功能
  
  tool.setMultiRound(true)
+
+2025.02.14：v1.0.4-支持fim补全功能，调用方法
+@param prompt 前缀 
+@param suffix 后缀  
+@param max_tokens 最大token数
+tool.getFimResponse("def fib(a):", "return fib(a - 1) + fib(a - 2)", 128);
