@@ -27,13 +27,13 @@ Step 2. Add the dependency
  <img width="509" alt="1739343134574_A5A175E0-A158-4478-A854-56526DED4AB8" src="https://github.com/user-attachments/assets/994e173f-e166-4738-a449-334b7936bd8c" />
 
 
- 2025.02.13:v1.0.3-支持多轮对话功能
+ 2025.02.13:支持多轮对话功能
  
  tool.setMultiRound(true)
  ![image](https://github.com/user-attachments/assets/fd6d23ce-5112-4170-bc9f-159b093770d2)
 
 
-2025.02.14：v1.0.4-支持fim补全功能，调用方法
+2025.02.14：支持fim补全功能，调用方法
 
 @param prompt 前缀 
 
