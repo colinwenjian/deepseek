@@ -36,4 +36,4 @@ Step 2. Add the dependency
 
 @param max_tokens 最大token数
 
-tool.getFimResponse("def fib(a):", "return fib(a - 1) + fib(a - 2)", 128);
+示例：tool.getFimResponse("def fib(a):", "return fib(a - 1) + fib(a - 2)", 128);
