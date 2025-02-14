@@ -23,3 +23,20 @@ data class ChatSetting(
     val model: String,
     val apiKey: String
 )
+
+
+//补全
+data class FimRequest(
+    val model: String,
+    val prompt: String, //前缀
+    val suffix: String,  //后缀
+    val max_tokens: Int
+)
+
+data class FimResponse(
+    val choices: List<Fim>
+)
+
+data class Fim(
+    val text: String
+)
