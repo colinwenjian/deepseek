@@ -12,11 +12,12 @@ import java.util.concurrent.TimeUnit
 import kotlin.math.log
 
 class DeepSeekTool {
+    private val firstPrompt = "你是 deepseek，是人工智能助手，你更擅长中文和英文的对话。你会为用户提供安全，有帮助，准确的回答。同时，你会拒绝一切涉及恐怖主义，种族歧视，黄色暴力等问题的回答。Moonshot AI 为专有名词，不可翻译成其他语言。"
     private var mApiKey: String = ""
     private var mModel: String = "deepseek-chat"
     private var deepSeekApiService: DeepSeekApiService
     private var deepSeekFimService: DeepSeekFimService
-    private var isMultiRound = false;
+    private var isMultiRound = true;
     private lateinit var mMessages: ArrayList<Message>
 
     init {
@@ -57,6 +58,9 @@ class DeepSeekTool {
 
     fun setKey(key: String) {
         mApiKey = key
+
+        val re= getAIResponse(firstPrompt, "system")
+        Log.i("colin", re)
     }
 
     fun setMultiRound(mr : Boolean) {
@@ -64,6 +68,10 @@ class DeepSeekTool {
     }
 
     fun getAIResponse(userMessage: String) : String {
+        return getAIResponse(userMessage, "user")
+    }
+
+    fun getAIResponse(userMessage: String, role: String) : String {
         var result = "";
         if (mApiKey.isEmpty()) {
             return "Please set your API Key"
@@ -75,7 +83,7 @@ class DeepSeekTool {
 
 
 
-        mMessages.add(Message(role = "user", content = userMessage))
+        mMessages.add(Message(role = role, content = userMessage))
 
 
         val request = ChatRequest(
@@ -137,4 +145,10 @@ class DeepSeekTool {
         return result;
     }
 
+    fun clear() {
+        if (mMessages != null) {
+            mMessages.clear()
+            mMessages.add(Message(role = "system", content = firstPrompt))
+        }
+    }
 }
