@@ -30,6 +30,8 @@ Step 2. Add the dependency
  2025.02.13:v1.0.3-支持多轮对话功能
  
  tool.setMultiRound(true)
+ ![image](https://github.com/user-attachments/assets/fd6d23ce-5112-4170-bc9f-159b093770d2)
+
 
 2025.02.14：v1.0.4-支持fim补全功能，调用方法
 
