@@ -44,6 +44,8 @@ class DeepSeekTool {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
+        mMessages = arrayListOf<Message>()
+
         deepSeekApiService = retrofit.create(DeepSeekApiService::class.java)
 
         deepSeekFimService = fimRetrofit.create(DeepSeekFimService::class.java)
@@ -59,9 +61,6 @@ class DeepSeekTool {
 
     fun setMultiRound(mr : Boolean) {
         isMultiRound = mr
-        if (isMultiRound) {
-            mMessages = arrayListOf<Message>()
-        }
     }
 
     fun getAIResponse(userMessage: String) : String {
